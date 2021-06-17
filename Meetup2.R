@@ -22,7 +22,7 @@ vec1[2] #Accessing vector element
 vec1[c(1,3)] # Accessing first and third element
 
 
-vec5=c(1L, 2L, 4.5) #if we mix integer and float values, the entire vector gets converted into float (numeric datatype)
+vec5=c(1L, 2L, 4.5,"musa") #if we mix integer and float values, the entire vector gets converted into float (numeric datatype)
 vec5
 class(vec5)
 
@@ -105,15 +105,16 @@ z
 #############################################################################################
 # Creating a datagrame
 
-num <- c(2, 3, 5) 
-char <- c("aa", "bb", "cc") 
-log <- c(TRUE, FALSE, TRUE) 
+num <- c(2, 3, 5,10) 
+char <- c("aa", "bb", "cc","dd") 
+log <- c(TRUE, FALSE, TRUE, FALSE) 
 df = data.frame(num, char, log)       # df is a data frame
 
 df
 
 #inbuilt dataframe in R - mtcars
 mtcars
+library(help = "datasets")
 #data description
 #https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html
 
@@ -121,7 +122,7 @@ head(mtcars) # head()- first several rows
 tail(mtcars) # tail()-last several rows
 
 str(mtcars) # structure of the dataset
-mtcars[1:2,1:4] # First 4 attributes of the first 2 brand of the car
+mtcars[1:2,1:2] # First 4 attributes of the first 2 brand of the car
 summary(mtcars)
 mtcars$mpg #Accessing column
 mtcars$disp #Accessing column
@@ -225,7 +226,7 @@ factor_gender_vector
 #############################################################################################
 
 # Vector with numerics from 1 up to 10
-my_vector <- 1:10 
+my_vector <- 1:10
 
 # Matrix with numerics from 1 up to 9
 my_matrix <- matrix(1:9, ncol = 3)
